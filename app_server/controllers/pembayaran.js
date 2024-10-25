@@ -24,6 +24,7 @@ const index = (req, res, next) => {
 // Insert new Pembayaran
 const insert = (req, res, next) => {
   const pembayaran = new Pembayaran({
+    transaksi_id: new mongoose.Types.ObjectId(),
     metode_pembayaran: req.body.metode_pembayaran,
     jumlah: req.body.jumlah,
     tanggal_pembayaran: req.body.tanggal_pembayaran,
