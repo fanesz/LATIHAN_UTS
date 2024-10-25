@@ -7,7 +7,6 @@ const index = (req, res, next) => {
     .then((result) => {
       const responseMessage = {
         code: 200,
-        success: true,
         message: "Successfull",
         data: result,
       };
@@ -16,7 +15,6 @@ const index = (req, res, next) => {
     .catch((e) => {
       const responseMessage = {
         code: 400,
-        success: false,
         message: "Bad request",
       };
       res.status(400).json(responseMessage);
@@ -37,7 +35,6 @@ const insert = (req, res, next) => {
     .then((result) => {
       const responseMessage = {
         code: 200,
-        success: true,
         message: "Successfull",
         data: result,
       };
@@ -46,7 +43,6 @@ const insert = (req, res, next) => {
     .catch((e) => {
       const responseMessage = {
         code: 400,
-        success: true,
         message: "Bad request",
       };
       res.status(400).json(responseMessage);
